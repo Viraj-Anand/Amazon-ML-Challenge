@@ -1,15 +1,15 @@
-First we removed PRODUCT_ID,TITLE,BULLET_POINTS,DESCRIPTION as we figured that PRODUCT's length is not related to it directly
-and it is showing a direct relation with PRODUCT_ID_TYPE.
+First we removed PRODUCT_ID,TITLE,BULLET_POINTS,DESCRIPTION as we figured that the target is not related to it directly
+and they are showing a high correlation with PRODUCT_ID_TYPE.
 
 With remaining data we detected outliers and removed them using interquantile method.
 
 We used "ROBUST SCALAR" to scale the data as it is not very much affected by outliers.
 
-At first we tried RANDOMFOREST regressor,LINEAR regressior and XGboost but couldnt minimize the loss very much and the accurracy of the model was not up to the mark.
+At first we tried 'RANDOM FOREST' regressor,LINEAR regressor and XGboost but couldnt minimize the loss very much and the accurracy of the model was not up to the mark.
 
-Finally we decided to build a neural network with the layering of (128*256*256*128) and fit thee data into it.
-we trained the data for 20 epochs using ADAM optimiser and used mean absolute eerror for calculating loss.
+Finally we decided to build a neural network with the layering of (128X256X256X128) and fit the data into it.
+we trained the data for 20 epochs using ADAM optimizer and used mean absolute error for calculating loss.
 
 After 20 epochs the training loss was 920.1493 and validation loss was 880.455.
 
-Using the scoring metric given in the problem statement, we got a n accuracy of 96.2% on the test data.
+Using the scoring metric given in the problem statement, we got an accuracy of 96.2% on the test data.
